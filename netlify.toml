@@ -1,8 +1,20 @@
 [build]
   publish = "."
 
-# ivizhin.ai is the primary name. ivizhin.com and both www names are set as redirects to it in
-# Netlify → Domain management, so nothing is needed here for them.
+# ivizhin.ai is the primary name. Netlify only redirects the www/apex variants of the primary and the
+# netlify.app name on its own, so ivizhin.com is sent to ivizhin.ai here. One name in search results,
+# one name on business cards.
+[[redirects]]
+  from = "https://ivizhin.com/*"
+  to = "https://ivizhin.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.ivizhin.com/*"
+  to = "https://ivizhin.ai/:splat"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/index.html"

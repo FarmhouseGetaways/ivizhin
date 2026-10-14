@@ -1,20 +1,22 @@
 [build]
   publish = "."
 
-# ivizhin.ai is the primary name. Netlify only redirects the www/apex variants of the primary and the
-# netlify.app name on its own, so ivizhin.com is sent to ivizhin.ai here. One name in search results,
-# one name on business cards.
-[[redirects]]
-  from = "https://ivizhin.com/*"
-  to = "https://ivizhin.ai/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.ivizhin.com/*"
-  to = "https://ivizhin.ai/:splat"
-  status = 301
-  force = true
+# ivizhin.ai is meant to be the primary name, with ivizhin.com sent to it. On 14 Oct 2026 ivizhin.ai was
+# suspended by directnic's ICANN email verification (nameservers at emailverification.info), so the
+# redirect would send everyone to a dead name. ivizhin.com is primary until the .ai is reactivated.
+# When it is: make ivizhin.ai primary in Netlify → Domain management and uncomment these two blocks.
+#
+# [[redirects]]
+#   from = "https://ivizhin.com/*"
+#   to = "https://ivizhin.ai/:splat"
+#   status = 301
+#   force = true
+#
+# [[redirects]]
+#   from = "https://www.ivizhin.com/*"
+#   to = "https://ivizhin.ai/:splat"
+#   status = 301
+#   force = true
 
 [[headers]]
   for = "/index.html"

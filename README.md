@@ -44,6 +44,8 @@ Verify DNS configuration.
 | `css/site.css` | All styling. Bump `?v=` in `index.html` when it changes |
 | `js/scroll-progress.js` | The thin line across the top that fills as the page scrolls. A copy: the master is `reports/scroll-progress/` in the projects folder, shared by all the sites |
 | `images/` | Game photos (from the barn micro-site), product marks, Modern Arcades photos |
+| `images/og-ivizhin-v1.png` | The link preview card (1200x630) shown when ivizhin.ai is sent in a text or posted. Source `reports/ivizhin-og/og.html`, rendered with headless Chrome; a new version gets a new filename (`-v2`) |
+| `images/apple-touch-icon-v1.png` | 180x180 icon for the preview's small logo and the iPhone home screen. Source `reports/ivizhin-og/icon.html` |
 
 `images/*` is served as immutable for a year (`netlify.toml`). To change a picture, save it under a
 **new filename** and update the `src`; overwriting the same name leaves visitors on the old one.
